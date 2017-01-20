@@ -21,17 +21,3 @@ function isAllTrue(arr,filerFunction) {
     if(flag===true)return true;
     return false;
 }
-var allNumbers = [1, 2, 4, 5, 6, 7, 8],
-    someNumbers = [1, 2, 'привет', 4, 5, 'мир', 6, 7, 8],
-    noNumbers = ['это', 'массив', 'без', 'чисел'],
-    emptyArray=[];
-
-function isNumber(val) {
-    return typeof val === 'number';
-}
-
-console.log(isAllTrue(allNumbers, isNumber));
-console.log(isAllTrue(someNumbers, isNumber));
-console.log(isAllTrue(noNumbers, isNumber));
-console.log(isAllTrue(emptyArray, isNumber));
-
