@@ -16,8 +16,19 @@ QUnit.test( "isAllTrue", function( assert ) {
         function() {
             isAllTrue(emptyArray, isNumber);
         },
-        function( err ) {
-            return err.toString() === 'Array is empty';
-        }
+        new Error("Array is empty"),
+        "test passed"
     );
+
+    assert.throws(
+        function() {
+            isAllTrue(emptyArray, isNumber);
+        },
+        function( err ) {
+            console.log(err);
+            return err.toString() === "Error: Array is empty";
+        },
+        "raised error instance satisfies the callback function"
+    );
+    
 });
