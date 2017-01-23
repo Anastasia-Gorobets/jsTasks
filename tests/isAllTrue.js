@@ -30,5 +30,5 @@ QUnit.test( "isAllTrue", function( assert ) {
         },
         "raised error instance satisfies the callback function"
     );
-    
+
 });
